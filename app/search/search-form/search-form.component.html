@@ -1,0 +1,24 @@
+<div class="search-form">
+    <form #form="ngForm"
+        (ngSubmit)="onSubmitHandler(form)"
+        [ngClass]="{'ng-pristine': form.pristine, 'ng-dirty': !form.pristine, 'ng-touched': form.touched, 'ng-untouched': !form.touched,'ng-valid': form.valid, 'ng-invalid': !form.valid, 'ng-submitted': submitted}"
+        novalidate="novalidate">
+        <div class="form-group">
+            <label for="login-input">Github search</label>
+            <input [(ngModel)]="query"
+                id="login-input"
+                class="form-control"
+                type="text"
+                ngControl="login"
+                #loginInput="ngForm"
+                placeholder="Github login"
+                (ngModelChange)="userNotFound=false"
+                required="required" />
+            <div [hidden]="loginInput.valid || (loginInput.pristine && !submitted)"
+                class="text-danger pull-left validation-message">
+                Github user login is required
+            </div>
+            <button class="btn btn-primary pull-right" type="submit" name="search-button">Search</button>
+        </div>
+    </form>
+</div>
