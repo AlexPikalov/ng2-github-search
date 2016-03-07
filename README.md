@@ -2,7 +2,7 @@ http://alexpikalov.github.io/ng2-github-search/
 ---------------
 ### Angular2 based simple github.com search
 
-This application was created during my experiments with Angular2 version 2.0.0-beta.0. Here you can find a working and covered by unit tests application written on Angular2.
+This application was created during my experiments with Angular2 version 2.0.0-beta.0. Here you can find working and covered by unit tests application written on Angular2.
 
 ## Install and run
 
