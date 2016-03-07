@@ -1,0 +1,27 @@
+<div class="search-form-wrapper pinned"
+    [query]="query"
+    (onSearchSubmit)="onSearchSubmit($event)"></div>
+<div class="search-result-wrapper container" *ngIf="!!result.length && !error">
+    <div class="result-item row" *ngFor="#user of result">
+        <div class="md-col-12">
+            <div class="user-avatar-container pull-left">
+                <img class="user-avatar" [github-avatar]="user.avatar_url">
+            </div>
+            <div class="pull-left">
+                <span class="user-login" (click)="showDetails(user)">{{user.login}}</span>
+                <a href [routerLink]="['UserProfile', {login: user.login}]">Profile</a> <a href>Repositories</a>
+            </div>
+        </div>
+    </div>
+    <pager [totalCount]="totalCount"
+        [current]="currentPage"
+        [itemsPerPage]="itemsPerPage"
+        (onNewPage)="onNewPage($event)"></pager>
+</div>
+<div class="search-result-wrapper container" *ngIf="!!error">
+    <div class="row">
+        <div class="col-md-12 text-danger text-center">
+            {{error}}
+        </div>
+    </div>
+</div>

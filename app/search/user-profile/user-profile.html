@@ -1,0 +1,28 @@
+<div *ngIf="!profile">
+    Loading...
+</div>
+<div *ngIf="profile">
+    <div class="row">
+        <div class="md-col-12">
+            <a class="back-button" href (click)="goBack()">Back</a><h3>{{profile.name}} ({{profile.login}})</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="md-col-12">
+            <img [github-avatar]="profile.avatar_url" class="user-avatar pull-left" />
+            <div class="profile-short-info pull-left">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span>{{profile.location || 'None'}}</span>
+                    </div>
+                    <div class="col-md-12">
+                        <span>{{profile.company || 'None'}}</span>
+                    </div>
+                    <div class="col-md-12">
+                        <span>{{profile.bio || 'None'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

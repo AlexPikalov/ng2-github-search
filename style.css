@@ -1,0 +1,121 @@
+app {
+    display: block;
+    padding: 10px 10px 0;
+}
+
+.service-message {
+    font-size: 1.5em;
+}
+
+/* Search */
+
+.search-form-wrapper {
+    background: white;
+}
+
+.search-form,
+.not-found-page {
+    max-width: 480px;
+    height: 120px;
+    margin: 164px auto 0;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .search-form,
+    .not-found-page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.search-form label {
+    font-size: 1.5em;
+}
+
+.search-form input[type="text"] {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.search-form form.ng-dirty input.ng-invalid[type="text"],
+.search-form form.ng-submitted input.ng-invalid[type="text"] {
+    border-left: 4px solid #ce4844;
+}
+
+.search-form .btn:focus {
+    outline: none;
+}
+
+.search-form .validation-message {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.pinned.search-form-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.pinned .search-form {
+    margin-top: 0;
+}
+
+.search-result-wrapper {
+    width: 480px;
+    margin-top: 120px;
+    margin-bottom: 96px;
+}
+
+.search-result-wrapper .result-item {
+    margin-bottom: 10px;
+}
+
+.search-result-wrapper .result-item .user-avatar {
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+.search-result-wrapper .result-item .user-login {
+    font-size: 1.5em;
+    display: block;
+}
+
+/* Profile details */
+
+.user-profile-wrapper {
+    width: 480px;
+}
+
+.user-profile-wrapper .user-avatar {
+    width: 96px;
+    height: 96px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
+
+/*.user-profile-wrapper .profile-short-info {
+    padding: 0 0 0 10px;
+}*/
+
+
+/* Pager component */
+pager {
+    display: inline-block;
+}
+
+/* Footer section */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    background: #fff;
+}
